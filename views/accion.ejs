@@ -1,0 +1,37 @@
+<%- include("template/cabecera", {tituloWeb: 'Accion' }) %>
+<div class="box">
+    <h1>Aqui tenemos las diferentes Acciones y sus caracteristicas</h1>
+    <p>Podemos observar la fecha de Realizacionde la accion, su estado, una descripcion de la misma y el luegar donde se hará la acción</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Fecha de Realizacion</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Lugar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (arrayAccion.length> 0) { %>
+            <!--Haremos el foreach para recorrer el array-->
+            <% arrayAccion.forEach(accion => { %>
+                <tr>
+                    <td><%= accion.Fecha_Realicacion %></td>
+                    <td><%= accion.Estado %></td>
+                    <td><%= accion.Descripcion %></td>
+                    <td><%= accion.Lugar %></td>
+
+                </tr>
+            <% }) %>
+        <% } %>
+  </tbody>
+</table>
+<a class="btn btn-success btn-block my-4" href="/accion/crearaccion">Crear una nueva Accion</a>
+
+<a class="nav-link" href="/">Volver al inicio</a>

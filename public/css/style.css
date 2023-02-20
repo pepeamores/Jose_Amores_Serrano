@@ -1,0 +1,31 @@
+#logo{
+    width: 100%;
+}
+table,th,td{
+    border: 1px solid black;
+    background-color: azure;
+}
+.bg23{
+    border: 1px solid;
+    padding: 20px;
+}
+#junta{
+    width: 30%;
+}
+header{
+
+    background-color: aliceblue;
+}
+.btn2{
+    background-color: rgb(154, 154, 231);
+}
+.box{
+    text-align: center;
+}
+.btn{
+    background-color: blue;
+    text-align: center;
+}
+body{
+    background-color: #368f3f ;
+}

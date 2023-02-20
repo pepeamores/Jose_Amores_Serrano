@@ -1,0 +1,23 @@
+<%- include("template/cabecera", {tituloWeb: 'Nueva Accion' }) %>
+    
+<div class="box">
+    <h1>Aqui podemos añadir una nuevas Acciones con sus datos </h1>
+    <p>En esta pagina se podra meter los datos de una accion para facilitar  encontrar un voluntario para una persona</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+        <h1>Crear nueva Accion</h1>
+        <form action="/accion" class="my-2" method="POST">
+            <input type="text" placeholder="Fecha_Realicacion" class="form-control my-2" name="Fecha_Realicacion">
+            <input type="text" placeholder="Estado" class="form-control my-2" name="Estado">
+            <input type="text" placeholder="Descripcion " class="form-control my-2" name="Descripcion">
+            <input type="text" placeholder="Lugar " class="form-control my-2" name="Lugar">
+            <button type="submit" class="btn btn-dark btn-block">
+                Agregar
+            </button>
+        </form>
+    </div>

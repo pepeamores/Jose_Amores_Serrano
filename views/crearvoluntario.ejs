@@ -1,0 +1,26 @@
+<%- include("template/cabecera", {tituloWeb: 'Nuevo Voluntario' }) %>
+<div class="box">
+    <h1>Aqui podemos añadir un nuevo voluntario con sus datos</h1>
+    <p>En esta pagina se podra meter los datos de un voluntario para facilitar  encontrar una persona para este voluntario</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>   
+<div class="container">
+        <h1>Crear nuevo Voluntario</h1>
+        <form action="/voluntario" class="my-2" method="POST">
+            <input type="text" placeholder="Nombre" class="form-control my-2" name="Nombre">
+            <input type="text" placeholder="Apellido" class="form-control my-2" name="Apellido">
+            <input type="text" placeholder="Ciudad " class="form-control my-2" name="Ciudad">
+            <input type="text" placeholder="Domicilio " class="form-control my-2" name="Domicilio">
+            <input type="text" placeholder="Dni " class="form-control my-2" name="Dni">
+            <input type="text" placeholder="Edad " class="form-control my-2" name="Edad">
+            <input type="text" placeholder="Formacion " class="form-control my-2" name="Formacion">
+            <input type="text" placeholder="Experiencia " class="form-control my-2" name="Experiencia">
+            <button type="submit" class="btn btn-dark btn-block">
+                Agregar
+            </button>
+        </form>
+    </div>

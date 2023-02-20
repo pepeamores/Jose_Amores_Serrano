@@ -1,0 +1,49 @@
+<%- include("template/cabecera", {tituloWeb: 'Voluntarios' }) %>
+<div class="box">
+    <h1>Aqui tenemos las diferentes Voluntarios y sus datos</h1>
+    <p>En esta pagina se vera los datos de todos los voluntarios que se agregen a esta base de datos y sus datos.</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Domicilio</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Formacion</th>
+            <th scope="col">Experiencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <% if (arrayVoluntario.length> 0) { %>
+            <!--Haremos el foreach para recorrer el array-->
+            <% arrayVoluntario.forEach(voluntario => { %>
+                <tr>
+                    <th scope="row"><%= voluntario.id %></th>
+                    <td><%= voluntario.Nombre %></td>
+                    <td><%= voluntario.Apellido %></td>
+                    <td><%= voluntario.Ciudad %></td>
+                    <td><%= voluntario.Domicilio %></td>
+                    <td><%= voluntario.Dni %></td>
+                    <td><%= voluntario.Edad %></td>
+                    <td><%= voluntario.Formacion %></td>
+                    <td><%= voluntario.Experiencia %></td>
+                    <td>
+                        <a class="btn2 btn-warning btn-sm" href="voluntario/<%= voluntario.id %>">Eliminar</a>
+                    </td>
+                </tr>
+            <% }) %>
+        <% } %>
+  </tbody>
+</table>
+<a class="btn btn-success btn-block my-4" href="/voluntario/crearvoluntario">Crear un nuevo Voluntario</a>
+<a class="nav-link" href="/">Volver al inicio</a>

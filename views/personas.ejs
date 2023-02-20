@@ -1,0 +1,43 @@
+<%- include("template/cabecera", {tituloWeb: 'Personas' }) %>
+<div class="box">
+    <h1>Aqui tenemos las diferentes Personas que necesitan de un voluntario</h1>
+    <p>En esta pagina se vera los datos de todas las personas que se agregen a esta base de datos y sus datos.</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Domicilio</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Patologia</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <% if (arrayPersona.length> 0) { %>
+            <!--Haremos el foreach para recorrer el array-->
+            <% arrayPersona.forEach(persona => { %>
+                <tr>
+                    <td><%= persona.Nombre %></td>
+                    <td><%= persona.Apellido %></td>
+                    <td><%= persona.Ciudad %></td>
+                    <td><%= persona.Domicilio %></td>
+                    <td><%= persona.Dni %></td>
+                    <td><%= persona.Edad %></td>
+                    <td><%= persona.Patologia %></td>
+
+                </tr>
+            <% }) %>
+        <% } %>
+  </tbody>
+</table>
+<a class="btn btn-success btn-block my-4" href="/personas/crearpersonas">Crear un nuevo Voluntario</a>
+<a class="nav-link" href="/">Volver al inicio</a>

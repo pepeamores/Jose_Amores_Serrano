@@ -1,0 +1,37 @@
+<%- include("template/cabecera", {tituloWeb: 'Centros' }) %>
+
+<div class="box">
+    <h1>Aqui tenemos las diferentes Centros</h1>
+    <p>Podemos observar el nombre del centro, la ciudad y el codigo postal del centro.</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Codigo_Postal</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <% if (arrayCentro.length> 0) { %>
+            <!--Haremos el foreach para recorrer el array-->
+            <% arrayCentro.forEach(centro => { %>
+                <tr>
+                    <td><%= centro.Nombre %></td>
+                    <td><%= centro.Ciudad %></td>
+                    <td><%= centro.Codigo_Postal %></td>
+
+                </tr>
+            <% }) %>
+        <% } %>
+  </tbody>
+</table>
+<a class="btn btn-success btn-block my-4" href="/centro/crearcentro">Crear una nuevo Centro</a>
+
+<a class="nav-link" href="/">Volver al inicio</a>
